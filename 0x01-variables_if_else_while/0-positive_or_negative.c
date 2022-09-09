@@ -1,27 +1,51 @@
 #include <stdio.h>
 
-#include <unistd.h>
+#include <time.h>
 
+#include <stdlib.h>
 
-
-/**
+/*
  *
- *  * main - Entry point
+ * main - main block
  *
- *   *
+ *   * Description: Get a random number and print the number
  *
- *    * Return: Always 1 (Success)
+ *    * and if it is positive, negative, or zero
  *
- *     */
+ *     * Return: 0
+ *
+ */
 
 int main(void)
 
 {
 
-		write(2,
+		int n;
 
-				"and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
 
-			return (1);
+
+			srand(time(0));
+
+				n = rand() - RAND_MAX / 2;
+
+
+
+					if (n > 0)
+
+								printf("%i is positive\n", n);
+
+						else if (n < 0)
+
+									printf("%i is negative\n", n);
+
+							else
+
+										printf("%i is zero\n", n);
+
+
+
+								return (0);
 
 }
+
+
