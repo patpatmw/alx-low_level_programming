@@ -1,42 +1,56 @@
-#include "main.h"
+/*                                                                                                                                   
 
-/**
+ * File: 0-memset.c                                                                                                                  
 
- * _memset - function fills the first n bytes
+ * Auth: not                                                                                                                         
 
- * of the memory area pointed to by s
+ */                                                                                                                                  
 
- * with the constant byte b
+                                                                                                                                     
 
- * @s: memory area to fill
+#include "main.h"                                                                                                                    
 
- * @b: constant byte to fill
+                                                                                                                                     
 
- * @n: bytes in memory yo fill
+/**                                                                                                                                  
 
- *
+ * _memset - Fills the first n bytes of the memory area                                                                              
 
- * Return: the memory area filled s
+ *          pointed to by @s with the constant byte @c.                                                                              
 
- */
+ * @s: A pointer to the memory area to be filled.                                                                                    
 
-char *_memset(char *s, char b, unsigned int n)
+ * @c: The character to fill the memory area with.                                                                                   
 
-{
+ * @n: The number of bytes to be filled.                                                                                             
 
-	unsigned int x;
+ * description _memset: over there                                                                                                   
 
+ *                                                                                                                                   
 
+ * Return: A pointer to the filled memory area @s.                                                                                   
 
-	for (x = 0; x < n; x++)
+ *                                                                                                                                   
 
-	{
+ */                                                                                                                                  
 
-		s[x] = b;
+void *_memset(void *s, int c, size_t n)                                                                                              
 
-	}
+{                                                                                                                                    
 
+        unsigned int index;                                                                                                          
 
+        unsigned char *memory = s, value = c;                                                                                        
 
-	return (s);
+                                                                                                                                     
+
+        for (index = 0; index < n; index++)                                                                                          
+
+                memory[index] = value;                                                                                               
+
+                                                                                                                                     
+
+        return (memory);                                                                                                             
+
+}
 
