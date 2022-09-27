@@ -1,56 +1,42 @@
-/*                                                                                                                                   
+#include "main.h"
 
- * File: 0-memset.c                                                                                                                  
+/**
 
- * Auth: not                                                                                                                         
+ * _memset - function fills the first n bytes
 
- */                                                                                                                                  
+ * of the memory area pointed to by s
 
-                                                                                                                                     
+ * with the constant byte b
 
-#include "main.h"                                                                                                                    
+ * @s: memory area to fill
 
-                                                                                                                                     
+ * @b: constant byte to fill
 
-/**                                                                                                                                  
+ * @n: bytes in memory yo fill
 
- * _memset - Fills the first n bytes of the memory area                                                                              
+ *
 
- *          pointed to by @s with the constant byte @c.                                                                              
+ * Return: the memory area filled s
 
- * @s: A pointer to the memory area to be filled.                                                                                    
+ */
 
- * @c: The character to fill the memory area with.                                                                                   
+char *_memset(char *s, char b, unsigned int n)
 
- * @n: The number of bytes to be filled.                                                                                             
+{
 
- * description _memset: over there                                                                                                   
+	unsigned int x;
 
- *                                                                                                                                   
 
- * Return: A pointer to the filled memory area @s.                                                                                   
 
- *                                                                                                                                   
+	for (x = 0; x < n; x++)
 
- */                                                                                                                                  
+	{
 
-void *_memset(void *s, int c, size_t n)                                                                                              
+		s[x] = b;
 
-{                                                                                                                                    
+	}
 
-        unsigned int index;                                                                                                          
 
-        unsigned char *memory = s, value = c;                                                                                        
 
-                                                                                                                                     
-
-        for (index = 0; index < n; index++)                                                                                          
-
-                memory[index] = value;                                                                                               
-
-                                                                                                                                     
-
-        return (memory);                                                                                                             
-
-}
+	return (s);
 
