@@ -1,4 +1,13 @@
-int _putchar(char c);                                                                                                                
+#ifndef _MAIN_H_
 
-int check_num(char *str);
+#define _MAIN_H_
 
+
+
+int _putchar(char c);
+
+int _atoi(char *s);
+
+
+
+#endif
