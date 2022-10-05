@@ -1,5 +1,3 @@
-s (67 sloc)  1.16 KB
-
 #include "main.h"
 /**
  * count_word - helper function to count the number of words in a string
